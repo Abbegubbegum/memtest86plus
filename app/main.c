@@ -731,6 +731,8 @@ void main(void)
             if (error_count == 0) {
                 display_status("Pass   ");
                 display_big_status(true);
+                usleep(2000000); // Wait 2 seconds so user can see the result
+                reboot();
             } else {
                 display_big_status(false);
             }

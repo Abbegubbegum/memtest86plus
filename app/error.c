@@ -11,7 +11,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include <limits.h>
+#define INT_MAX 2147483647
 
 #include "smp.h"
 #include "vmem.h"

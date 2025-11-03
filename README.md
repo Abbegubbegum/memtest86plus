@@ -1,5 +1,16 @@
 # Memtest86+
 
+## Custom Modifications
+
+This fork has been modified to automatically reboot after completing a single pass when no errors are detected. This enables automated memory testing workflows where the system needs to reboot automatically after a successful test. If errors are found during the first pass, the system will remain running to allow error inspection.
+
+**Behavior:**
+- Runs all 11 memory tests in a single pass (pass 0)
+- If no errors are found: waits 2 seconds, then automatically reboots
+- If errors are found: continues running for manual inspection
+
+---
+
 Memtest86+ is a free, open-source, stand-alone memory tester for x86, x86-64
 and LoongArch64 architecture computers. It provides a much more thorough memory
 check than that provided by BIOS memory tests.
